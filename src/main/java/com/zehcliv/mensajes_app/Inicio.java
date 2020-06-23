@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package com.zehcliv.mensajes_app;
-
 import java.sql.Connection;
 import java.util.Scanner;
 
@@ -29,6 +28,22 @@ public class Inicio {
             //leemos la opcion del usuario
             opcion=sc.nextInt();
             
+            switch (opcion){
+                case 1:
+                    mensajesService.crearMensaje();
+                    break;
+                case 2:
+                    mensajesService.listarMensajes();
+                    break;
+                case 3:
+                    mensajesService.editarMensaje();
+                    break;
+                case 4:
+                    mensajesService.borrarMensaje();
+                    break;
+                default:
+                    break;
+            }
         }while(opcion!=5);
                
     }
